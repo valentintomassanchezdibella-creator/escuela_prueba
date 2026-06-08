@@ -61,6 +61,37 @@
     --horarios-btn: rgb(0, 127, 211);
 }
 
+/* Fuentes */
+@font-face {
+    font-family: "titulo";
+    src: url("/fonts/titulo/Title.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "texto-l";
+    src: url("/fonts/texto/Extralight.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "texto-b";
+    src: url("/fonts/texto/SemiboldItalic.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: "texto-tab";
+    src: url("/fonts/texto/VariableFont.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+
+
 html{
     scroll-behavior: smooth;
     scroll-padding-top: 64px;
@@ -75,27 +106,6 @@ html{
 
 html, body{
     overflow-x: hidden;
-}
-
-/* Fuentes */
-@font-face {
-    font-family: "titulo";
-    src: url("/fonts/titulo/Bold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "texto-l";
-    src: url("/fonts/texto/Extralight.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "texto-b";
-    src: url("/fonts/texto/SemiboldItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: "texto-tab";
-    src: url("/fonts/texto/VariableFont.woff2") format("woff2");
 }
 
 body{
