@@ -100,7 +100,6 @@ html, body{
 
 body{
     background-color: var(--fondo-principal);
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     /* Esta en los dos secciones especilalidades y faq */
     .section-eyebrow{
@@ -112,7 +111,6 @@ body{
         font-weight: 600;
         letter-spacing: 0.2px;
         text-transform: uppercase;
-        color: var(--blanco);
         margin-bottom: 18px;
         color: var(--eyebrow);
     }
