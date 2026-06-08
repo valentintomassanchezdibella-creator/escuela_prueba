@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../imagenes/faviconchaca.ico" type="image/x-icon">
+    <title>Ciclo Básico</title>
+</head>
+<body data-page="especialidad">
+    <header class="header">
+        <div class="navbar" id="navbar"></div>
+        <script>
+            fetch("/pagina/componentes/navbar.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+        </script>
+
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="../videos/video.mp4" type="video/mp4">
+        </video>
+        
+        <div class="header-txt">
+            <h1>Ciclo Basico</h1>
+            <p>
+                Somos una escuela técnica pública y gratuita ubicada en Morón, orientada a la formación académica y profesional de nuestros estudiantes
+            </p>
+        </div>
+    </header>
+
+    <section class="descripcion">
+        <div class="desc-inner scroll">
+            <div class="desc-left">
+                <div class="section-eyebrow">Sobre los talleres</div>
+                <h2>Ciclo básico</h2>
+                <div class="desc-divider"></div>
+            </div>
+
+            <div class="desc-right">
+                <p>
+                    Introduce a los estudiantes en habilidades técnicas fundamentales como carpintería electricidad, soldadura, dibujo técnico, y tornería, combinando actividades prácticas y teóricas que fortalecen el trabajo en equipo
+                </p>
+                <p>
+                    Establece el sentido de responsabilidad y el uso seguro de herramientas, una base sólida para continuar cualquiera de las especialidades técnicas de la institución
+                </p>    
+                <div class="desc-stats">
+                    <div class="desc-item">
+                        <div class="stat-num">3</div>
+                        <div class="stat-label">Años de cursada</div>
+                    </div>
+
+                    <div class="desc-item">
+                        <div class="stat-num">2</div>
+                        <div class="stat-label">Turnos</div>
+                    </div>
+
+                    <div class="desc-item">
+                        <div class="stat-num">+12</div>
+                        <div class="stat-label">Materias</div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="entrevista-section">
+        <div class="info">
+            <div class="section-eyebrow">Sobre la especialidad</div>
+            <h2 class="section-title">Entrevista con el profesor</h2>
+        </div>
+        <div class="entrevista-container scroll">
+            <div class="entrevista-left">
+                <div class="entrevista-left-body">
+                    <h2  style="--delay:1">Entrevista con el profesor</h2>
+                    <p  style="--delay:2">Hablamos con el profesor de programación para conocer más sobre la especialidad, su experiencia y consejos para los futuros estudiantes.</p>
+                    <p  style="--delay:3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed odit tenetur consequuntur! Blanditiis, facilis error numquam officia incidunt enim in voluptas delectus excepturi magnam provident dicta libero quos aperiam?</p>
+                    <span style="--delay:4">Profesor en Informatica Damian Lopez</span>
+                </div>
+            </div>
+
+            <div class="entrevista-right" style="--delay:1">
+                <div class="video-wrapper">
+                    <video loop playsinline controls poster="" class="entrevista-video">
+                        <source src="../videos/teto.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="horarios">
+        <div class="btn-container scroll">
+            <button data-tab="anio-1" class="active">1er Año</button>
+            <button data-tab="anio-2">2do Año</button>
+            <button data-tab="anio-3">3er Año</button>
+        </div>
+        <div class="tabla-container scroll">
+            <div class="tabla-grid dos-col active" id="anio-1">
+                <div class="tabla-titulo">Primer año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion General</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Ciencias Naturales</div><div>144</div></div>
+                    <div class="fila"><div>Ciencias Sociales</div><div>144</div></div>
+                    <div class="fila"><div>Ingles</div><div>72</div></div>
+                    <div class="fila"><div>Matematica</div><div>72</div></div>
+                    <div class="fila"><div>Practicas del Lenguaje</div><div>144</div></div>
+                    <div class="fila"><div>Construccion de la Ciudadania</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Artistica</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Fisica</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>792</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Carpinteria</div><div>72</div></div>
+                    <div class="fila"><div>Hojalateria</div><div>72</div></div>
+                    <div class="fila"><div>Dibujo Tecnico</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>216</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 1008</div>
+            </div>
+
+            <div class="tabla-grid dos-col" id="anio-2">
+                <div class="tabla-titulo">Segundo año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion General</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Biologia</div><div>72</div></div>
+                    <div class="fila"><div>Fisico Quimica</div><div>72</div></div>
+                    <div class="fila"><div>Geografia</div><div>72</div></div>
+                    <div class="fila"><div>Historia</div><div>72</div></div>
+                    <div class="fila"><div>Ingles</div><div>72</div></div>
+                    <div class="fila"><div>Matematica</div><div>72</div></div>
+                    <div class="fila"><div>Practicas del Lenguaje</div><div>144</div></div>
+                    <div class="fila"><div>Construccion de la Ciudadania</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Artistica</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Fisica</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>792</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Carpinteria</div><div>72</div></div>
+                    <div class="fila"><div>Ajustes</div><div>72</div></div>
+                    <div class="fila"><div>Electricidad</div><div>72</div></div>
+                    <div class="fila"><div>Soldadura</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>288</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 1080</div>
+            </div>
+
+            <div class="tabla-grid dos-col" id="anio-3">
+                <div class="tabla-titulo">Tercer Año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion General</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Biologia</div><div>72</div></div>
+                    <div class="fila"><div>Fisico Quimica</div><div>72</div></div>
+                    <div class="fila"><div>Geografia</div><div>72</div></div>
+                    <div class="fila"><div>Historia</div><div>72</div></div>
+                    <div class="fila"><div>Ingles</div><div>72</div></div>
+                    <div class="fila"><div>Matematica</div><div>72</div></div>
+                    <div class="fila"><div>Practicas del Lenguaje</div><div>144</div></div>
+                    <div class="fila"><div>Construccion de la Ciudadania</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Artistica</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Fisica</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>792</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Herreria</div><div>72</div></div>
+                    <div class="fila"><div>Electricidad</div><div>72</div></div>
+                    <div class="fila"><div>Ajustes</div><div>72</div></div>
+                    <div class="fila"><div>Torneria</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>288</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 1080</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria-section">
+        <div class="container scroll">
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/ciclo_basico/fto1.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/ciclo_basico/fto2.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner active">
+                    <img src="../fotos/ciclo_basico/fto3.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/ciclo_basico/fto4.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/ciclo_basico/fto5.avif">
+                </div>
+            </div>
+        </div>
+        <div class="botones">
+            <button><</button>
+            <button>></button>
+        </div>
+    </section>
+
+    <section class="instrumentos-section">
+        <div class="info">
+            <div class="section-eyebrow">Equipo</div>
+            <h2 class="section-title">Equipo que usan nuestros estudiantes</h2>
+        </div>
+        <div class="instrumentos-container scroll">
+            <div class="instrumento" style="--animation:MoverDerecha; --delay:0">
+                <div class="wrapper-img">
+                    <img src="../fotos/ciclo_basico/fto6.avif" alt="Tablero de Dibujo">
+                </div>
+                <div class="instrumento-content">
+                    <h3>Tablero de Dibujo</h3>
+                    <p>Contamos con tableros de dibujo para que los estudiantes desarrollen habilidades en dibujo tecnico, interpretación de planos y representación gráfica, fortaleciendo la precisión y la creatividad en trabajos manuales y técnicos.</p>
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverIzquierda; --delay:1">
+                <div class="instrumento-content">
+                    <h3>Tablero Electrico</h3>
+                    <p>Contamos con tableros eléctricos para que los estudiantes aprendan sobre circuitos, conexiones y funcionamiento de instalaciones eléctricas, promoviendo la práctica segura y el conocimiento técnico aplicado.</p>
+                </div>
+                <div class="wrapper-img">
+                    <img src="../fotos/ciclo_basico/fto8.avif" alt="Tablero Electrico">
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverDerecha; --delay:2">
+                <div class="wrapper-img">
+                    <img src="../fotos/ciclo_basico/fto7.avif" alt="Torno">
+                </div>
+                <div class="instrumento-content">
+                    <h3>Torno</h3>
+                    <p>Contamos con tornos para que los estudiantes desarrollen habilidades en mecanizado, fabricación de piezas y uso de maquinaria industrial, fortaleciendo la práctica técnica y el aprendizaje aplicado.</p>
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverIzquierda; --delay:3">
+                <div class="instrumento-content">
+                    <h3>Morsa</h3>
+                    <p>Contamos con morsas para que los estudiantes puedan sujetar materiales de manera firme y segura durante trabajos de corte, ajuste y fabricación, facilitando la práctica en distintos procesos técnicos.</p>
+                </div>
+                <div class="wrapper-img">
+                    <img src="../fotos/ciclo_basico/fto9.avif" alt="Morsa">
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverDerecha; --delay:4">
+                <div class="wrapper-img">
+                    <img src="../fotos/ciclo_basico/fto10.avif" alt="Soldadora">
+                </div>
+                <div class="instrumento-content">
+                    <h3>Soldadora</h3>
+                    <p>Contamos con soldadoras para que los estudiantes desarrollen habilidades en unión de materiales metálicos, aprendiendo técnicas de soldadura y normas de seguridad utilizadas en el ámbito industrial y técnico.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="perfil">
+        <div class="info">
+            <div class="section-eyebrow">Perfil del estudiante</div>
+            <h2 class="section-title">¿Que vas a aprender?</h2>
+        </div>
+        <div class="container scroll">
+            <div class="card">
+                <div class="titulo">
+                    <h3>Dibujo técnico</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Aprenderás a representar piezas, estructuras y proyectos mediante planos y normas técnicas.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Carpintería y herrería básica</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Tendrás un primer acercamiento al trabajo con materiales, herramientas y técnicas utilizadas en talleres.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Uso de herramientas</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Conocerás el manejo correcto y seguro de herramientas manuales y eléctricas utilizadas en distintas especialidades.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Proyectos tecnológicos</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Participarás en la creación de trabajos prácticos aplicando creatividad, lógica y conocimientos técnicos.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Electricidad básica</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Aprenderás conceptos fundamentales sobre circuitos, conexiones y funcionamiento de sistemas eléctricos simples.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Introducción a programación y mecánica</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Explorarás diferentes áreas técnicas para descubrir sus aplicaciones y desarrollar una base sólida para el futuro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer" id="footer"></div>
+    <script>
+        fetch("/pagina/componentes/footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <script src="../script.js"></script>
+</body>
+</html>

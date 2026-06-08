@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../imagenes/faviconchaca.ico" type="image/x-icon">
+    <title>Programación</title>
+</head>
+<body data-page="especialidad">
+    <header class="header">
+        <div class="navbar" id="navbar"></div>
+        <script>
+            fetch("/pagina/componentes/navbar.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+        </script>
+
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="../videos/video.mp4" type="video/mp4">
+        </video>
+        
+        <div class="header-txt">
+            <h1>Programacion</h1>
+            <p>
+                Somos una escuela técnica pública y gratuita ubicada en Morón, orientada a la formación académica y profesional de nuestros estudiantes
+            </p>
+        </div>
+
+    </header>
+
+    <section class="descripcion">
+        <div class="desc-inner scroll">
+            <div class="desc-left">
+                <div class="section-eyebrow">Sobre la especialidad</div>
+                <h2>Tecnico en <br> Programación</h2>
+                <div class="desc-divider"></div>
+            </div>
+
+            <div class="desc-right">
+                <p>
+                    Técnicos profesionales que pueden desarrollar software, aplicaciones y soluciones digitales mediante distintos lenguajes de programación, bases de datos y herramientas de desarrollo modernas.
+                </p>
+                <p>
+                    Los estudiantes aprenderán a desarrollar sistemas, resolver problemas mediante lógica computacional y crear proyectos tecnológicos aplicados a necesidades reales. La especialidad fomenta el pensamiento analítico, el trabajo en equipo y la creatividad, ofreciendo una sólida preparación para el ámbito laboral y estudios superiores relacionados con el desarrollo de software y la tecnología.
+                <div class="desc-stats">
+                    <div class="desc-item">
+                        <div class="stat-num">4</div>
+                        <div class="stat-label">Años de cursada</div>
+                    </div>
+
+                    <div class="desc-item">
+                        <div class="stat-num">2</div>
+                        <div class="stat-label">Turnos</div>
+                    </div>
+
+                    <div class="desc-item">
+                        <div class="stat-num">+12</div>
+                        <div class="stat-label">Materias</div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="entrevista-section">
+        <div class="info">
+            <div class="section-eyebrow">Sobre la especialidad</div>
+            <h2 class="section-title">Entrevista con el profesor</h2>
+        </div>
+        <div class="entrevista-container scroll">
+            <div class="entrevista-left">
+                <div class="entrevista-left-body">
+                    <h2  style="--delay:1">Entrevista con el profesor</h2>
+                    <p  style="--delay:2">Hablamos con el profesor de programación para conocer más sobre la especialidad, su experiencia y consejos para los futuros estudiantes.</p>
+                    <p  style="--delay:3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed odit tenetur consequuntur! Blanditiis, facilis error numquam officia incidunt enim in voluptas delectus excepturi magnam provident dicta libero quos aperiam?</p>
+                    <span style="--delay:4">Profesor en Informatica Damian Lopez</span>
+                </div>
+            </div>
+
+            <div class="entrevista-right" style="--delay:1">
+                <div class="video-wrapper">
+                    <video loop playsinline controls poster="" class="entrevista-video">
+                        <source src="../videos/teto.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="horarios">
+        <div class="btn-container scroll">
+            <button data-tab="anio-4" class="active">4to Año</button>
+            <button data-tab="anio-5" >5to Año</button>
+            <button data-tab="anio-6" >6to Año</button>
+            <button data-tab="anio-7" >7to Año</button>
+        </div>
+        <div class="tabla-container scroll">
+
+            <!-- Cuarto año -->
+            <div class="tabla-grid active" id="anio-4">
+                <div class="tabla-titulo">Cuarto año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion General</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Literatura</div><div>72</div></div>
+                    <div class="fila"><div>Ingles</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Fisica</div><div>72</div></div>
+                    <div class="fila"><div>Salud y Adolescencia</div><div>72</div></div>
+                    <div class="fila"><div>Historia</div><div>72</div></div>
+                    <div class="fila"><div>Geografia</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Cientifico Tecnologico</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Matematica-Ciclo superior</div><div>144</div></div>
+                    <div class="fila"><div>Fisica</div><div>108</div></div>
+                    <div class="fila"><div>Quimica</div><div>72</div></div>
+                    <div class="fila"><div>Arquitectura de Hardware</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>396</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica Especifica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Metodologia de Programacion</div><div>72</div></div>
+                    <div class="fila"><div>Hardware y Componentes</div><div>144</div></div>
+                    <div class="fila"><div>Sistemas Operativos</div><div>144</div></div>
+                    <div class="fila"><div>Suite de Aplicaciones</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 1260</div>
+            </div>
+
+
+            <!-- Quinto año -->
+            <div class="tabla-grid" id="anio-5">
+                <div class="tabla-titulo">Quinto año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion General</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Literatura</div><div>72</div></div>
+                    <div class="fila"><div>Ingles</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Fisica</div><div>72</div></div>
+                    <div class="fila"><div>Politica y Adolescencia</div><div>72</div></div>
+                    <div class="fila"><div>Historia</div><div>72</div></div>
+                    <div class="fila"><div>Geografia</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Cientifico Tecnologico</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Analisis Matematico</div><div>144</div></div>
+                    <div class="fila"><div>Sistemas Digitales</div><div>108</div></div>
+                    <div class="fila"><div>Base de Datos</div><div>72</div></div>
+                    <div class="fila"><div>Modelos y Sistemas 1</div><div>108</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica Especifica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Lenguajes de Programacion 1</div><div>144</div></div>
+                    <div class="fila"><div>Redes Informaticas</div><div>144</div></div>
+                    <div class="fila"><div>Diseño Web</div><div>72</div></div>
+                    <div class="fila"><div>Arquitectura de Base de Datos</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 1296</div>
+            </div>
+
+
+            <!-- Sexto año -->
+            <div class="tabla-grid" id="anio-6">
+                <div class="tabla-titulo">Sexto año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion General</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Literatura</div><div>72</div></div>
+                    <div class="fila"><div>Ingles</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Fisica</div><div>72</div></div>
+                    <div class="fila"><div>Filosofia</div><div>72</div></div>
+                    <div class="fila"><div>Arte</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>360</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Cientifico Tecnologico</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Matematica Aplicada</div><div>72</div></div>
+                    <div class="fila"><div>Sistemas Digitales 2</div><div>108</div></div>
+                    <div class="fila"><div>Sistemas de Gestion y Autogestion</div><div>108</div></div>
+                    <div class="fila"><div>Seguridad Informatica</div><div>108</div></div>
+                    <div class="fila"><div>Derechos del Trabajo</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>468</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica Especifica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Lenguajes de Programacion 2</div><div>144</div></div>
+                    <div class="fila"><div>Programacion y Controles Automatizados</div><div>72</div></div>
+                    <div class="fila"><div>Desarrollo de Aplicaciones Web Estaticas</div><div>72</div></div>
+                    <div class="fila"><div>Desarrollo de Aplicaciones Web Dinamicas</div><div>144</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 1260</div>
+            </div>
+
+
+            <!-- Septimo año -->
+            <div class="tabla-grid" id="anio-7">
+                <div class="tabla-titulo">Septimo año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Practicas Profesionalizantes</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Practicas</div><div>200</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>200</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Cientifico Tecnologico</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Emprendimientos e Innovacion Productiva</div><div>72</div></div>
+                    <div class="fila"><div>Evaluacion de Proyectos</div><div>108</div></div>
+                    <div class="fila"><div>Modelos y Sistemas 2</div><div>72</div></div>
+                    <div class="fila"><div>Organizacion y Metodos</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>324</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica Especifica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Proyecto Integrador</div><div>144</div></div>
+                    <div class="fila"><div>Desarrollo de Software para Plataformas Moviles</div><div>144</div></div>
+                    <div class="fila"><div>Diseño e Implementacion de Sitios Web</div><div>144</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 956</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria-section">
+        <div class="container scroll">
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/programacion/fto1.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/programacion/fto2.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner active">
+                    <img src="../fotos/programacion/fto4.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/programacion/fto3.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/programacion/fto5.avif">
+                </div>
+            </div>
+        </div>
+        <div class="botones">
+            <button><</button>
+            <button>></button>
+        </div>
+    </section>
+
+    <section class="instrumentos-section">
+        <div class="info">
+            <div class="section-eyebrow">Equipo</div>
+            <h2 class="section-title">Equipo que usan nuestros estudiantes</h2>
+        </div>
+        <div class="instrumentos-container scroll">
+            <div class="instrumento" style="--animation:MoverDerecha; --delay:0">
+                <div class="wrapper-img">
+                    <img src="../fotos/programacion/fto2.avif" alt="Computadora">
+                </div>
+                <div class="instrumento-content">
+                    <h3>Computadora</h3>
+                    <p>
+                        Contamos con computadoras aptas para el aprendizaje en programación, Todas cuentan con varios programas para acceder a diagramas de flujo, editores de código, computadores virtuales, etc. Estas computadoras además cuentan con conexión a internet.
+                        <br> <br>
+                        Las computadoras reciben mantenimiento de forma continua para que se encuentren en excelente estado para el uso que les darán los alumnos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverIzquierda; --delay:1">
+                <div class="instrumento-content">
+                    <h3>Impresora 3D</h3>
+                    <p> 
+                        Contamos con impresoras 3D en las que alumnos de años superiores podrán acceder para trabajar y experimentar con impresión 3D, aprendiendo a utilizarlas de forma correcta y aplicándolo en un uso pedagógico.
+                    </p>
+                </div>
+                <div class="wrapper-img" style="aspect-ratio: 1/1; flex: 0 0 30%;">
+                    <img src="../fotos/programacion/fto6.avif" alt="Impresora 3D">
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverDerecha; --delay:2">
+                <div class="wrapper-img">
+                    <img src="../fotos/programacion/laptop.avif" alt="Laptops">
+                </div>
+                <div class="instrumento-content">
+                    <h3>Laptops</h3>
+                    <p>
+                        Aparte de las computadoras de escritorio, contamos con un equipo que administra el empleo de multiples laptops para prestar a los alumnos en caso de que no alcancen la cantidad de computadores de escritorio. Estas laptops cuentan con varios programas, exactamente los mismos programas que las computadoras de escritorio, con el propósito de que todos accedan a estas herramientas.
+
+                        Todos los alumnos pueden pedir prestadas estas laptops y luego devolverlas en cierto horario. Estas laptops cuentan con conexión a internet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="perfil">
+        <div class="info">
+            <div class="section-eyebrow">Perfil del egresado</div>
+            <h2 class="section-title">¿Que vas a aprender?</h2>
+        </div>
+        <div class="container scroll">
+            <div class="card">
+                <div class="titulo">
+                    <h3>Creación de páginas web</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Aprenderás a diseñar y desarrollar sitios web modernos, interactivos y adaptables para distintos dispositivos utilizando tecnologías actuales.</p>
+                </div>
+            </div>
+
+            <div class="card"> 
+                <div class="titulo">
+                    <h3>Desarrollo de aplicaciones móviles</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Podrás crear aplicaciones funcionales para celulares y tablets, enfocadas en la experiencia del usuario y la resolución de necesidades reales.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Programación de sistemas</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Aprenderás a desarrollar software capaz de automatizar tareas, organizar información y resolver problemas de manera eficiente.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Desarrollo backend y bases de datos</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Trabajarás con sistemas que almacenan, administran y procesan información utilizada por aplicaciones y páginas web.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Automatización de procesos</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Crearás programas y herramientas que permiten realizar tareas repetitivas de forma automática, optimizando tiempo y recursos.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Diseño de videojuegos</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Aprenderás todas las herramientas y sistemas que se necesitan para la creación de videojuegos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer" id="footer"></div>
+    <script>
+        fetch("/pagina/componentes/footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <script src="../script.js"></script>
+</body>
+</html>

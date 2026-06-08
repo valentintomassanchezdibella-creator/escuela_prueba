@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/faviconchaca.ico" type="image/x-icon">
+    <title>E.E.S.T N6 Chacabuco</title>
+</head>
+<body data-page="index">
+    <header class="header">
+        <div class="navbar" id="navbar"></div>
+        <script>
+            fetch("/pagina/componentes/navbar.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+        </script>
+
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="videos/video.mp4" type="video/mp4">
+        </video>
+        
+        <div class="header-txt">
+            <h1>E.E.S.T. N°6 Chacabuco</h1>
+            <p>
+                Somos una escuela técnica pública y gratuita ubicada en Morón, orientada a la formación académica y profesional de nuestros estudiantes
+            </p>
+            <button onclick="SaberMas()" class="btn-info">Saber Mas</button>
+        </div>
+    </header>
+   
+    <section class="especialidades" id="especialidad">
+        <div class="section-eyebrow">Especialidades</div>
+        <h2 class="section-title">Descubre nuestras especialidades</h2>
+        <div class="tarjeta-container scroll">
+            <div class="tarjeta" style="--delay:0">
+                <div class="tarjeta-inner" id="tarjeta-inner">
+                    <div class="titulo">
+                        <img src="imagenes/logos/ciclo_basico.avif" alt="Logo del ciclo basico">
+                        <h3>Ciclo Básico</h3>
+                    </div>
+                    <div class="cuerpo">
+                        <p>Formación inicial con conocimientos en carpintería, soldadura, electricidad y dibujo técnico. Desarrollamos habilidades prácticas para crear y analizar proyecto simples</p>
+                    </div>
+                    <div class="tarjeta-footer">
+                        <a href="paginas/ciclo_basico.html">Conoce mas</a>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta" style="--delay:1">
+                <div class="tarjeta-inner" id="tarjeta-inner">
+                    <div class="titulo">
+                        <img src="imagenes/logos/automotor.avif" alt="Logo del automotor">
+                        <h3>Automotor</h3>
+                    </div>
+                    <div class="cuerpo">
+                        <p>Formación en mecánica, mantenimiento y diagnóstico automotor, con práctica en vehículos reales y herramientas actuales</p>
+                    </div>
+                    <div class="tarjeta-footer">
+                        <a href="paginas/automotor.html">Conoce mas</a>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta" style="--delay:2">
+                <div class="tarjeta-inner" id="tarjeta-inner">
+                    <div class="titulo">
+                        <img src="imagenes/logos/electromecanica.avif" alt="Logo del electromecanica">
+                        <h3>Electromecánica</h3>
+                    </div>
+                    <div class="cuerpo">
+                        <p>Estudio de sistemas electromecánicos y desarrollo de habilidades en motores, circuitos y control. Aplicamos tecnologías actuales en entornos industriales</p>
+                    </div>
+                    <div class="tarjeta-footer">
+                        <a href="paginas/electro.html">Conoce mas</a>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta" style="--delay:3">
+                <div class="tarjeta-inner" id="tarjeta-inner">
+                    <div class="titulo">
+                        <img src="imagenes/logos/informatica.avif" alt="Logo del informatica">
+                        <h3>Informática</h3>
+                    </div>
+                    <div class="cuerpo">
+                        <p>Formación en programación, redes y sistemas informáticos. Desarrollo de soluciones digitales y manejo de herramientas tecnológicas actuales</p>
+                    </div>
+                    <div class="tarjeta-footer">
+                        <a href="paginas/informatica.html">Conoce mas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tarjeta" style="--delay:4">
+                <div class="tarjeta-inner" id="tarjeta-inner">
+                    <div class="titulo">
+                        <img src="imagenes/logos/programacion.avif" alt="Logo del programacion">
+                        <h3>Programación</h3>
+                    </div>
+                    <div class="cuerpo">
+                        <p>Desarrollo de software mediante distintos lenguajes y lógica de programación. Creación de aplicaciones y resolución de problemas prácticos</p>
+                    </div>
+                    <div class="tarjeta-footer">
+                        <a href="paginas/programacion.html">Conoce mas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria-section">
+        <div class="container scroll">
+            <div class="wrapper">
+                <div class="wrapper-inner active">
+                    <img src="fotos/index/fto4.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="fotos/index/fto1.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="fotos/index/fto5.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="fotos/index/fto2.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="fotos/conny_avif/chaca_entrada.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="fotos/conny_avif/chaca_esquina.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="fotos/extras/fto1.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="fotos/extras/fto2.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="fotos/extras/fto3.avif">
+                </div>
+            </div>
+        </div>
+        <div class="botones">
+            <button><</button>
+            <button>></button>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="pregunta-container scroll">
+            <div class="section-eyebrow">Preguntas frecuentes</div>
+            <h2 class="section-title">Encuentra respuestas a tus dudas</h2>
+            <ul>
+                <li class="faq-item" style="--delay:0">
+                    <button class="faq-btn">
+                        <span>¿Donde es?</span>
+                        <span class="icon">↓</span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-inner">
+                            <div class="faq-divider"></div>
+                            <p>
+                                El establecimiento educativo se encuentra ubicado en Avenida Rivadavia 17337, entre las calles General Juan Martín de Pueyrredón y General Cornelio Saavedra, en la localidad de Morón, Provincia de Buenos Aires.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="faq-item" style="--delay:1">
+                    <button class="faq-btn">
+                        <span>¿Qué son las especialidades y cuáles hay?</span>
+                        <span class="icon">↓</span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-inner">
+                            <div class="faq-divider"></div>
+                            <p>
+                                Al finalizar el tercer año del ciclo básico, los alumnos que ingresan al ciclo superior pueden optar por una especialidad que definirá su orientación técnica. Las especialidades ofrecidas son: Programación, Electromecánica, Informática y Automotor. Esta elección determina la formación en talleres específicos. Asimismo, al concluir el sexto año e ingresar a séptimo, los estudiantes realizan prácticas profesionalizantes orientadas a su inserción en el ámbito laboral.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="faq-item" style="--delay:2">
+                    <button class="faq-btn">
+                        <span>¿Qué son los talleres y cuáles hay?</span>
+                        <span class="icon">↓</span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-inner">
+                            <div class="faq-divider"></div>
+                            <p>
+                                Durante el ciclo básico (1.º a 3.º año), los talleres abarcan diversas áreas que permiten a los alumnos adquirir conocimientos prácticos mediante el uso de herramientas y equipamiento. Entre ellos se incluyen Carpintería, Soldadura, Hojalatería, Dibujo Técnico, Electricidad y Tornería. A partir del ciclo superior, los estudiantes se especializan en una de las orientaciones mencionadas anteriormente.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="faq-item" style="--delay:3">
+                    <button class="faq-btn" >
+                        <span>¿Codigo de vestimenta?</span>
+                        <span class="icon">↓</span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-inner">
+                            <div class="faq-divider"></div>
+                            <p>
+                                Se establece un código de vestimenta que incluye pantalones largos de jean en tonos azules, remeras con mangas que cubran el abdomen y buzos de colores lisos y discretos. El calzado debe ser cerrado (zapatos o zapatillas). Se sugiere el uso de indumentaria institucional. Para los talleres, es obligatorio el uso de guardapolvo por razones de seguridad. No está permitido el uso de bermudas, shorts, ojotas, calzas, musculosas, camisetas deportivas, gorras ni accesorios como aros o piercings. Para Educación Física, se permite vestimenta deportiva adecuada, manteniendo criterios de comodidad y cobertura.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="faq-item"  style="--delay:4">
+                    <button class="faq-btn">
+                        <span>¿Se deben llevar herramientas?</span>
+                        <span class="icon">↓</span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-inner">
+                            <div class="faq-divider"></div>
+                            <p>
+                               No es obligatorio contar con herramientas propias, aunque en determinados talleres se puede solicitar o recomendar el uso de elementos específicos como guardapolvo, guantes u otras herramientas.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="faq-item" style="--delay:5"> 
+                    <button class="faq-btn" >
+                        <span>¿Cómo funcionan las prácticas de septimo año?</span>
+                        <span class="icon">↓</span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-inner">
+                            <div class="faq-divider"></div>
+                            <p>
+                              Las prácticas profesionalizantes de séptimo año varían según la especialidad elegida. El cursado teórico se desarrolla en horario vespertino (de 18:00 a 22:20), mientras que las prácticas pueden realizarse en turno mañana (8:00 a 12:00) o turno tarde (14:00 a 18:00), permitiendo al alumno adquirir experiencia en contextos similares al ámbito laboral.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="faq-item" style="--delay:6">
+                    <button class="faq-btn" >
+                        <span>¿Qué es el turno vespertino?</span>
+                        <span class="icon">↓</span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-inner">
+                            <div class="faq-divider"></div>
+                            <p>
+                              El turno vespertino corresponde al horario comprendido entre las 18:00 y las 22:20, destinado principalmente a estudiantes de séptimo año y, en algunos casos, de sexto año.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="faq-item" style="--delay:7">
+                    <button class="faq-btn">
+                        <span>¿Cómo autorizo a un responsable para que retire al alumno?</span>
+                        <span class="icon">↓</span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-inner">
+                            <div class="faq-divider"></div>
+                            <p>
+                              La autorización para el retiro de alumnos por parte de adultos responsables se realiza mediante el cuaderno de comunicaciones, consignando nombre, apellido y DNI del autorizado. Alternativamente, puede gestionarse a través del preceptor, quien habilita el registro de responsables.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="faq-item" style="--delay:8">
+                    <button class="faq-btn">
+                        <span>¿Dónde se compra el cuaderno de comunicados?</span>
+                        <span class="icon">↓</span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-inner">
+                            <div class="faq-divider"></div>
+                            <p>
+                              El cuaderno de comunicaciones se adquiere en la cooperadora de la institución. Se recomienda completar los datos personales, de contacto y de salud correspondientes.bre, apellido y DNI del autorizado. Alternativamente, puede gestionarse a través del preceptor, quien habilita el registro de responsables.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="faq-item" style="--delay:9">
+                    <button class="faq-btn">
+                        <span>¿Los alumnos pueden desayunar/almorzar/cenar dentro de la institución?</span>
+                        <span class="icon">↓</span>
+                    </button>
+                    <div class="faq-body">
+                        <div class="faq-inner">
+                            <div class="faq-divider"></div>
+                            <p>
+                              Los alumnos pueden ingresar con alimentos para consumir durante el horario de almuerzo (12:00 a 13:30). Además, la institución ofrece desayuno durante el recreo matutino, dispone de microondas y cuenta con un buffet para la compra de alimentos.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <div class="footer" id="footer"></div>
+    <script>
+        fetch("/pagina/componentes/footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
