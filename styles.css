@@ -80,22 +80,22 @@ html, body{
 /* Fuentes */
 @font-face {
     font-family: "titulo";
-    src: url("/fonts/titulo/Literal\ -\ Bold\ \(Personal\ use\).otf")
+    src: url("/fonts/titulo/Bold.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "texto-l";
-    src: url("/fonts/texto/JHCSineas-Extralight.otf")
+    src: url("/fonts/texto/Extralight.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "texto-b";
-    src: url("/fonts/texto/JHCSineas-SemiboldItalic.otf")
+    src: url("/fonts/texto/SemiboldItalic.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "texto-tab";
-    src: url("/fonts/texto/Nunito-VariableFont_wght.ttf")
+    src: url("/fonts/texto/VariableFont.woff2") format("woff2");
 }
 
 body{
