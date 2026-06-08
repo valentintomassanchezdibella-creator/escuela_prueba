@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../imagenes/faviconchaca.ico" type="image/x-icon">
+    <title>Electromecánica</title>
+</head>
+<body data-page="especialidad">
+    <header class="header">
+        <div class="navbar" id="navbar"></div>
+        <script>
+            fetch("/pagina/componentes/navbar.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+        </script>
+
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="../videos/video.mp4" type="video/mp4">
+        </video>
+        
+        <div class="header-txt">
+            <h1>Electromecanica</h1>
+            <p>
+                Somos una escuela técnica pública y gratuita ubicada en Morón, orientada a la formación académica y profesional de nuestros estudiantes
+            </p>
+            </div>
+        </div>
+    </header>
+
+    <section class="descripcion">
+        <div class="desc-inner scroll">
+            <div class="desc-left">
+                <div class="section-eyebrow">Sobre la especialidad</div>
+                <h2>Tecnico en <br> Electromecánica</h2>
+                <div class="desc-divider"></div>
+            </div>
+
+            <div class="desc-right">
+                <p>
+                    Técnicos profesionales capacitados en el manejo, instalación y mantenimiento de sistemas eléctricos y mecánicos utilizados en la industria, integrando conocimientos de electricidad, mecánica, automatización y control industrial.
+                </p>
+                <p>
+                    Los estudiantes aprenderán a trabajar con máquinas, motores, circuitos eléctricos y herramientas técnicas desarrollando habilidades prácticas  para resolver problemas y optimizar procesos productivos. La formación brinda una salida laboral amplia en industrias, fábricas, servicios técnicos y distintos entornos tecnológicos.
+                <div class="desc-stats">
+                    <div class="desc-item">
+                        <div class="stat-num">4</div>
+                        <div class="stat-label">Años de cursada</div>
+                    </div>
+
+                    <div class="desc-item">
+                        <div class="stat-num">2</div>
+                        <div class="stat-label">Turnos</div>
+                    </div>
+
+                    <div class="desc-item">
+                        <div class="stat-num">+12</div>
+                        <div class="stat-label">Materias</div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="entrevista-section">
+        <div class="info">
+            <div class="section-eyebrow">Sobre la especialidad</div>
+            <h2 class="section-title">Entrevista con el profesor</h2>
+        </div>
+        <div class="entrevista-container scroll">
+            <div class="entrevista-left">
+                <div class="entrevista-left-body">
+                    <h2  style="--delay:1">Entrevista con el profesor</h2>
+                    <p  style="--delay:2">Hablamos con el profesor de programación para conocer más sobre la especialidad, su experiencia y consejos para los futuros estudiantes.</p>
+                    <p  style="--delay:3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed odit tenetur consequuntur! Blanditiis, facilis error numquam officia incidunt enim in voluptas delectus excepturi magnam provident dicta libero quos aperiam?</p>
+                    <span style="--delay:4">Profesor en Informatica Damian Lopez</span>
+                </div>
+            </div>
+
+            <div class="entrevista-right" style="--delay:1">
+                <div class="video-wrapper">
+                    <video loop playsinline controls poster="" class="entrevista-video">
+                        <source src="../videos/teto.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="horarios">
+        <div class="btn-container scroll">
+            <button data-tab="anio-4" class="active">4to Año</button>
+            <button data-tab="anio-5">5to Año</button>
+            <button data-tab="anio-6">6to Año</button>
+            <button data-tab="anio-7">7to Año</button>
+        </div>
+        <div class="tabla-container scroll">
+
+            <div class="tabla-grid active" id="anio-4">
+                <div class="tabla-titulo">Cuarto año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion General</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Literatura</div><div>72</div></div>
+                    <div class="fila"><div>Ingles</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Fisica</div><div>72</div></div>
+                    <div class="fila"><div>Salud y Adolescencia</div><div>72</div></div>
+                    <div class="fila"><div>Historia</div><div>72</div></div>
+                    <div class="fila"><div>Geografia</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Cientifico Tecnologico</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Matematica-Ciclo superior</div><div>144</div></div>
+                    <div class="fila"><div>Fisica</div><div>108</div></div>
+                    <div class="fila"><div>Quimica</div><div>72</div></div>
+                    <div class="fila"><div>Conocimiento de los Materiales</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>396</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica Especifica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Dibujo Tecnologico</div><div>72</div></div>
+                    <div class="fila"><div>Maquinarias Electricas y Automatismos</div><div>144</div></div>
+                    <div class="fila"><div>Diseño y Procesamiento Mecanico</div><div>144</div></div>
+                    <div class="fila"><div>Instalaciones y Aplicaciones de la Energia</div><div>144</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>504</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 1332</div>
+                </div>
+
+                <div class="tabla-grid" id="anio-5">
+                <div class="tabla-titulo">Quinto año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion General</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Literatura</div><div>72</div></div>
+                    <div class="fila"><div>Ingles</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Fisica</div><div>72</div></div>
+                    <div class="fila"><div>Politica y Ciudadania</div><div>72</div></div>
+                    <div class="fila"><div>Historia</div><div>72</div></div>
+                    <div class="fila"><div>Geografia</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Cientifico Tecnologico</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Analisis Matematico</div><div>144</div></div>
+                    <div class="fila"><div>Fisica Aplicada</div><div>108</div></div>
+                    <div class="fila"><div>Electrotecnia 1</div><div>108</div></div>
+                    <div class="fila"><div>Resistencia y Ensayos de los Materiales</div><div>108</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>468</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica Especifica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Maquinarias Electricas y Automatismos</div><div>144</div></div>
+                    <div class="fila"><div>Diseño y Procesamiento Mecanico</div><div>144</div></div>
+                    <div class="fila"><div>Instalaciones y Aplicaciones de la Energia</div><div>144</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 1332</div>
+            </div>
+
+            <div class="tabla-grid" id="anio-6">
+                <div class="tabla-titulo">Sexto año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion General</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Literatura</div><div>72</div></div>
+                    <div class="fila"><div>Ingles</div><div>72</div></div>
+                    <div class="fila"><div>Educacion Fisica</div><div>72</div></div>
+                    <div class="fila"><div>Filosofia</div><div>72</div></div>
+                    <div class="fila"><div>Arte</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>360</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Cientifico Tecnologico</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Matematica Aplicada</div><div>72</div></div>
+                    <div class="fila"><div>Termodinamica y Maquinas Termicas</div><div>108</div></div>
+                    <div class="fila"><div>Electrotecnia 2</div><div>108</div></div>
+                    <div class="fila"><div>Sistemas Mecanicos</div><div>108</div></div>
+                    <div class="fila"><div>Derechos del Trabajo</div><div>72</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>468</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica Especifica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Laboratorio de Mediciones Electricas</div><div>72</div></div>
+                    <div class="fila"><div>Maquinarias Electricas y Automatismos</div><div>144</div></div>
+                    <div class="fila"><div>Diseño y Procesamiento Mecanico</div><div>144</div></div>
+                    <div class="fila"><div>Instalaciones y Aplicaciones de la Energia</div><div>144</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>504</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 1332</div>
+            </div>
+
+            <div class="tabla-grid" id="anio-7">
+                <div class="tabla-titulo">Septimo año</div>
+
+                <div class="categoria">
+                    <div class="cat-header">Practicas Profesionalizantes</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Practicas</div><div>200</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>200</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Cientifico Tecnologico</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Emprendimientos Productivos y Desarrollo Local</div><div>72</div></div>
+                    <div class="fila"><div>Electronica Industrial</div><div>72</div></div>
+                    <div class="fila"><div>Seguridad, Higiene y Proteccion Ambiental</div><div>72</div></div>
+                    <div class="fila"><div>Maquinas Electricas</div><div>108</div></div>
+                    <div class="fila"><div>Sistemas Mecanicos</div><div>108</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>432</div></div>
+                </div>
+
+                <div class="categoria">
+                    <div class="cat-header">Formacion Tecnica Especifica</div>
+                    <div class="cat-subheader">Materia</div><div class="cat-subheader">CHT</div>
+                    <div class="fila"><div>Laboratorio de Metrologia y Control de Calidad</div><div>72</div></div>
+                    <div class="fila"><div>Mantenimiento y Montaje Electromecanico</div><div>144</div></div>
+                    <div class="fila"><div>Proyecto y Diseño Electromecanico</div><div>144</div></div>
+                    <div class="fila"><div>Proyecto y Diseño de Instalaciones Electricas</div><div>144</div></div>
+                    <div class="fila total"><div>Total de Horas Reloj</div><div>504</div></div>
+                </div>
+
+                <div class="horas-totales">Horas Totales: 1136</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria-section">
+        <div class="container scroll">
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/electro/fto5.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/diego_avif/FEMAR.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/diego_avif/MAX._tapping_capacity.avif">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="wrapper-inner">
+                    <img src="../fotos/diego_avif/mesa_de_trabajo.avif">
+                </div>
+            </div>
+
+        </div>
+        <div class="botones">
+            <button><</button>
+            <button>></button>
+        </div>
+    </section>
+
+    <section class="instrumentos-section">
+        <div class="info">
+            <div class="section-eyebrow">Equipo</div>
+            <h2 class="section-title">Equipo que usan nuestros estudiantes</h2>
+        </div>
+        <div class="instrumentos-container scroll">
+            <div class="instrumento" style="--animation:MoverDerecha; --delay:0">
+                <div class="wrapper-img">
+                    <img src="../fotos/diego_avif/fresadora.avif" alt="Fresadora">
+                </div>
+                <div class="instrumento-content">
+                    <h3>Fresadora</h3>
+                    <p>
+                        Una fresadora con la cuenta el colegio para que los alumnos realicen trabajos de precisión
+                        sobre distintos materiales, aprendiendo procesos de fabricación, cortes y 
+                        técnicas fundamentales de la industria mecánica.
+                    </p>
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverIzquierda; --delay:1">
+                <div class="instrumento-content">
+                    <h3>Torno Paralelo</h3>
+                    <p>
+                        Los alumnos cuentan con un torno paralelo para fabricar y mecanizar piezas cilíndricas
+                        con gran precisión. Gracias a este equipo, desarrollan habilidades relacionadas con el
+                        torneado, el desbaste y el acabado de componentes mecánicos.
+                    </p>
+                </div>
+                <div class="wrapper-img">
+                    <img src="../fotos/diego_avif/torno_paralelo.avif" alt="Torno Paralelo">
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverDerecha; --delay:2">
+                <div class="wrapper-img">
+                    <img src="../fotos/diego_avif/fresadora_de_torreta.avif" alt="Fresadora de Torreta">
+                </div>
+                <div class="instrumento-content">
+                    <h3>Fresadora de Torreta</h3>
+                    <p> 
+                        La institución cuenta con una fresadora de torreta que brinda
+                        mayor versatilidad para realizar cortes, ranurados y mecanizados
+                        complejos. Con esta máquina, los estudiantes practican operaciones
+                        de precisión similares a las utilizadas en entornos industriales.
+                    </p>
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverIzquierda; --delay:3">
+                <div class="instrumento-content">
+                    <h3>Torno CNC Mecanico</h3>
+                    <p>
+                        Los alumnos cuentan con un torno CNC que incorpora tecnologías
+                        de control numérico para la fabricación automatizada de piezas.
+                        Su utilización permite aprender conceptos de programación, 
+                        mecanizado avanzado y procesos productivos modernos.
+                    </p>
+                </div>
+                <div class="wrapper-img">
+                    <img src="../fotos/diego_avif/torno_CNC_mecatronic.avif" alt="Torno CNC">
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverDerecha; --delay:4">
+                <div class="wrapper-img">
+                    <img src="../fotos/diego_avif/fresadora_taladro.avif" alt="Fresadora de Taladro">
+                </div>
+                <div class="instrumento-content">
+                    <h3>Fresadora de Taladro</h3>
+                    <p>
+                        La institución dispone de una fresadora de taladro que permite realizar
+                        perforaciones y trabajos de mecanizado sobre diferentes materiales.
+                        Con este equipamiento, los estudiantes adquieren experiencia práctica
+                        en operaciones esenciales de taller.
+                     </p>
+                </div>
+            </div>
+            <div class="instrumento" style="--animation:MoverIzquierda; --delay:5">
+                <div class="instrumento-content">
+                    <h3>Compresor de Aire</h3>
+                    <p>
+                        Los alumnos cuentan con un compresor de aire que suministra energía 
+                        a diversas herramientas neumáticas utilizadas en las prácticas. Gracias 
+                        a este equipo, pueden familiarizarse con tecnologías ampliamente empleadas
+                        en la industria y los talleres mecánicos.
+                    </p>
+                </div>
+                <div class="wrapper-img">
+                    <img src="../fotos/diego_avif/compresor_de_aire.avif" alt="Compresor de Aire">
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverDerecha; --delay:6">
+                <div class="wrapper-img">
+                    <img src="../fotos/diego_avif/amoladora_de_banco_trifasica.avif" alt="amoladora de banco trifasica">
+                </div>
+                <div class="instrumento-content">
+                    <h3>Amoladora De Banco Trifasica</h3>
+                    <p>
+                        La institución cuenta con una amoladora de banco trifásica destinada
+                        al afilado, desbaste y acabado de piezas metálicas. Su uso permite
+                        a los estudiantes desarrollar técnicas de ajuste y terminación fundamentales
+                        para distintos trabajos mecánicos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="instrumento" style="--animation:MoverIzquierda; --delay:7">
+                <div class="instrumento-content">
+                    <h3>Roscadora de Banco</h3>
+                    <p>
+                        Los alumnos cuentan con una roscadora de banco que facilita la creación
+                        de roscas internas y externas con precisión. Mediante su utilización,
+                        aprenden procedimientos de fabricación y ensamblaje ampliamente utilizados
+                        en el ámbito industrial.
+                    </p>
+                </div>
+                <div class="wrapper-img">
+                    <img src="../fotos/diego_avif/roscadora_de_banco.avif" alt="Roscadora de Banco">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="perfil">
+        <div class="info">
+            <div class="section-eyebrow">Perfil del egresado</div>
+            <h2 class="section-title">¿Que vas a aprender?</h2>
+        </div>
+        <div class="container scroll">
+            <div class="card">
+                <div class="titulo">
+                    <h3>Manejo de tornos y fresadoras</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Aprenderás a utilizar máquinas industriales para fabricar y modificar piezas metálicas con precisión.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Automatización industrial</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Conocerás sistemas automáticos utilizados en fábricas y procesos productivos para mejorar eficiencia y control.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Instalaciones eléctricas</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Aprenderás a diseñar, montar y mantener circuitos eléctricos en distintos tipos de instalaciones.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Reparación de motores</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Trabajarás en el diagnóstico, mantenimiento y reparación de motores eléctricos y mecánicos.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Soldadura y mecanizado</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Desarrollarás habilidades prácticas para trabajar metales utilizando herramientas y técnicas industriales.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="titulo">
+                    <h3>Diseño de circuitos eléctricos</h3>
+                </div>
+                <div class="cuerpo">
+                    <p>Interpretarás planos y crearás sistemas eléctricos utilizados en máquinas y dispositivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer" id="footer"></div>
+    <script>
+        fetch("/pagina/componentes/footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <script src="../script.js"></script>
+</body>
+</html>
