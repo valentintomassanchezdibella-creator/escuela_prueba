@@ -13,8 +13,9 @@ function checkScroll() {
   })
 }
 
-/*function ocultarSpinner(){
+function ocultarSpinner(){
   setTimeout(() => {
+    clearInterval(intervaloTexto2);
     const spinner = document.getElementById("spinner-cargando");
     spinner.style.display = 'none';
   }, 1000);
@@ -24,17 +25,12 @@ function checkScroll() {
 function textoCargando() {
   const texto2 = document.getElementById("texto-cargando");
   let puntos = 0;
-
   
   return setInterval(() => {
     puntos = (puntos + 1) % 3 ;
     texto2.textContent = "Cargando Mapa." + ".".repeat(puntos);
   }, 500);
 } 
-  
-textoCargando();
-*/
-
 
 
 // Especialidad
@@ -389,12 +385,18 @@ fetch("/componentes/navbar.html")
   .then(data => {
       document.getElementById("navbar").innerHTML = data;
   });
-
+  
+let intervaloTexto2;
 fetch("/componentes/footer.html")
   .then(res => res.text())
   .then(data => {
       document.getElementById("footer").innerHTML = data;
+      
+      intervaloTexto2 = textoCargando();
   });
+
+
+
 
 
 if (pagina === "index"){
@@ -406,7 +408,7 @@ if (pagina === "index"){
 let intervaloTexto;
 
 if (pagina === "aic"){
-  intervaloTexto = textoBiblioCargando()
+  intervaloTexto = textoBiblioCargando();
   botonNormas();
 }
 else{
