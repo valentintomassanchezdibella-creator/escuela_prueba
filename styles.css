@@ -66,21 +66,18 @@
     font-family: "titulo";
     src: url("/fonts/titulo/Title.woff2") format("woff2");
     font-display: swap;
-    font-weight: 100 900;
 }
 
 @font-face {
     font-family: "texto-l";
     src: url("/fonts/texto/Extralight.woff2") format("woff2");
     font-display: swap;
-    font-weight: 100 900;
 }
 
 @font-face {
     font-family: "texto-b";
     src: url("/fonts/texto/SemiboldItalic.woff2") format("woff2");
     font-display: swap;
-    font-weight: 100 900;
 }
 
 @font-face {
@@ -362,7 +359,6 @@ body{
                 transition: transform 0.35s, border-color 0.35s;
                 &:hover{
                     border-color: rgba(96, 165, 250, 0.38); 
-                    transform: perspective(1000px) rotateY(20deg);
                 }
             }
         

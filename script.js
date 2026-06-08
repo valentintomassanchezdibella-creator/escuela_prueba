@@ -1,39 +1,7 @@
-const pagina = document.body.dataset.page;
-
-let intervaloTexto;
-
+// todo
 function SaberMas() {
     window.location.href = "#especialidad";
 }
-
-if (pagina === "aic"){
-  intervaloTexto = textoBiblioCargando()
-
-  const buttons1 = document.querySelectorAll(".tab-group button[data-tab]");
-  const contents = document.querySelectorAll(".tab-panel");
-
-  buttons1.forEach(button => {
-    button.addEventListener("click", () => {
-      buttons1.forEach(b => b.classList.remove("active"));
-      button.classList.add("active");
-
-      contents.forEach(c => c.classList.remove("active"));
-
-      const tab = button.getAttribute("data-tab");
-
-      document.getElementById(tab).classList.add("active");
-
-      checkScroll();
-      });
-  });
-}
-
-
-
-//Animaciones Scroll
-
-
-const elementos = document.querySelectorAll(".scroll");
 
 function checkScroll() {
   elementos.forEach(e => {
@@ -45,78 +13,31 @@ function checkScroll() {
   })
 }
 
-//ahora se ejecuta cuando vas a esa seccion desde un link tambien
-window.addEventListener("scroll", checkScroll);
-window.addEventListener("load", () => {
-  checkScroll;
-});
+/*function ocultarSpinner(){
+  setTimeout(() => {
+    const spinner = document.getElementById("spinner-cargando");
+    spinner.style.display = 'none';
+  }, 1000);
+}
+
+
+function textoCargando() {
+  const texto2 = document.getElementById("texto-cargando");
+  let puntos = 0;
 
   
+  return setInterval(() => {
+    puntos = (puntos + 1) % 3 ;
+    texto2.textContent = "Cargando Mapa." + ".".repeat(puntos);
+  }, 500);
+} 
+  
+textoCargando();
+*/
 
 
 
-// navbar y que de desactive cuando apretes un link
-
-document.addEventListener("click", (e) => {
-    if (e.target.closest("#menuBtn")) {
-        document.getElementById("nav").classList.toggle("active");
-    }
-
-    if (e.target.closest("#nav a")) {
-        document.getElementById("nav").classList.remove("active");
-    }
-});
-
-
-//Preguntas del FAQ
-
-if (pagina === "index"){
-  const faqItems = document.querySelectorAll(".faq-item");
-
-  faqItems.forEach(item =>{
-    
-    const btn = item.querySelector(".faq-btn");
-    const body = item.querySelector(".faq-body");
-
-    btn.addEventListener("click", () => {
-      item.classList.toggle("active");
-
-      if(item.classList.contains("active")){
-        body.style.maxHeight = body.scrollHeight + "px";
-      }
-      else{
-        body.style.maxHeight = 0;
-      }
-    })
-  })
-}
-
-// cada vez que cambie la ventana de tamaño que se actualice
-
-if (pagina !== "aic"){
-  window.addEventListener('resize', () => {
-    if (pagina === "especialidad"){
-      igualarAlturasPorIndice();
-      asignarAnimaciones();
-    }
-
-    if (pagina === "index"){
-      const faqItems = document.querySelectorAll(".faq-item");
-
-      faqItems.forEach(item =>{
-        const body = item.querySelector(".faq-body");
-        if(item.classList.contains("active")){
-            body.style.maxHeight = body.scrollHeight + "px";
-          };
-      })
-    }
-  });
-}
-
-
-//Next
-
-
+// Especialidad
 function igualarFilas() {
   document.querySelectorAll('.tabla-grid').forEach(grid => {
     const categorias = grid.querySelectorAll('.categoria');
@@ -143,7 +64,6 @@ function igualarFilas() {
     });
   });
 }
-
 
 function igualarAlturasPorIndice() {
   document.querySelectorAll('.tabla-grid').forEach(grid => {
@@ -182,190 +102,30 @@ function igualarAlturasPorIndice() {
   });
 }
 
-// Llamarlo al cargar la página
-if (pagina === "especialidad"){
-  window.addEventListener('load', () => {
-    igualarFilas();
-    igualarAlturasPorIndice();
-    asignarAnimaciones()
-  });
-}
-
-if (pagina !== "especialidad"){
-  ajustarUltimaFila();
-  window.addEventListener('resize', ajustarUltimaFila);
-}
-
-
-
-if (pagina === "especialidad"){
+function btnEspecialidad(){
   const buttons2 = document.querySelectorAll(".btn-container button[data-tab]");
   console.log(buttons2);
   const tablas = document.querySelectorAll(".tabla-grid");
-
+  
   buttons2.forEach(button => {
     button.addEventListener("click", () =>{
       buttons2.forEach(b => b.classList.remove("active"));
       button.classList.add("active");
       
       tablas.forEach(t => t.classList.remove("active"));
-
+  
       const tab = button.getAttribute("data-tab");
-
+  
       document.getElementById(tab).classList.add("active")
-
+  
       igualarAlturasPorIndice();
     });
   });
 }
 
-
-//carousel
-
-if (pagina !== "aic"){
-  function CrearCarrusel(section){
-
-    const WrapperContainer = section.querySelector(".container")
-    const wrappers = section.querySelectorAll(".wrapper-inner");
-
-    const btnPrev = section.querySelector(".botones button:first-child");
-    const btnNext = section.querySelector(".botones button:last-child");
-
-    let index = Math.floor(wrappers.length/2);
-
-    function updateCarousel(){
-      wrappers.forEach(w => w.classList.remove("active"));
-      wrappers[index].classList.add("active");
-
-      const wrapper = wrappers[index];
-      console.log(wrapper);
-
-      const ContainerRect = WrapperContainer.getBoundingClientRect();
-      const WrapperRect = wrapper.getBoundingClientRect();
-      console.log(ContainerRect);
-      console.log(WrapperRect);
-
-      const offset = (WrapperRect.left + WrapperRect.width / 2) - (ContainerRect.left + ContainerRect.width / 2);
-
-      WrapperContainer.style.transform = `translateX(${-offset}px)`;
-    }
-
-    btnNext.addEventListener("click", () =>{
-      index ++;
-      
-      if(index > wrappers.length-1){
-        index = 0;
-      }
-      
-      updateCarousel();
-    })
-
-    btnPrev.addEventListener("click", () =>{
-      index --;
-
-      if(index < 0){
-        index = wrappers.length-1;
-      }
-      
-      updateCarousel();
-
-    })
-
-    updateCarousel();
-    window.addEventListener('resize', () => {
-      updateCarousel();
-    });
-  }
-
-  const carruseles = document.querySelectorAll(".galeria-section");
-
-  carruseles.forEach(section => {
-    CrearCarrusel(section);
-  })
-}
-
-
-function ajustarUltimaFila() {
-    const container = document.querySelector('.tarjeta-container');
-    const cards = document.querySelectorAll('.tarjeta');
-    const gap = 40;
-    let minCardWidth = 0;
-    if (pagina === "index"){
-      minCardWidth = 340;
-    }
-    else{
-      minCardWidth = 250;
-    }
-
-    const columnas = Math.floor((container.offsetWidth + gap) / (minCardWidth + gap));
-    const ultimaFila = cards.length % columnas;
-
-
-    // resetear todas primero
-    cards.forEach(c => c.style.maxWidth = '');
-
-    if (ultimaFila !== 0) {
-        const anchoCard = cards[0].offsetWidth; // ancho real actual
-        cards.forEach(c => c.style.maxWidth = anchoCard + 'px');
-    }
-}
-
-
-// para que el scale funcione en botones que tengan la animacion MostrarBtn
-document.querySelectorAll('.btn-container button').forEach(btn => {
-  btn.addEventListener('animationend', () => {
-    btn.style.animation = 'none';
-  })
-})
-
-
-function ocultarSpinnerBiblio(){
-  setTimeout(() => {
-    clearInterval(intervaloTexto);
-    const spinnerBiblio = document.getElementById("spinner-biblio-cargando");
-    spinnerBiblio.style.display = 'none';
-  }, 3000);
-}
-
-function textoBiblioCargando() {
-  const texto = document.getElementById("texto-biblio-cargando");
-  let puntos = 0
-  
-  return setInterval(() => {
-    puntos = (puntos + 1) % 3 ;
-    texto.textContent = "Cargando Biblioteca Digital." + ".".repeat(puntos);
-  }, 500);
-}
-
-
-/*function ocultarSpinner(){
-  setTimeout(() => {
-    const spinner = document.getElementById("spinner-cargando");
-    spinner.style.display = 'none';
-  }, 1000);
-}
-
-
-function textoCargando() {
-  const texto2 = document.getElementById("texto-cargando");
-  let puntos = 0;
-
-  
-  return setInterval(() => {
-    puntos = (puntos + 1) % 3 ;
-    texto2.textContent = "Cargando Mapa." + ".".repeat(puntos);
-  }, 500);
-} 
-  
-textoCargando();
-*/
-
-
-
+// solo especialidades por ahora, podria usarse mas
 function asignarAnimaciones(){
-  console.log("gkgkokk")
   const cards = document.querySelectorAll(".card");
-  console.log(cards)
 
   if (!cards.length) return;
 
@@ -414,7 +174,64 @@ function asignarAnimaciones(){
   })
 }
 
-/* Intento de hacer que las cards tengan rotacion 3d, el card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY})deg`; no funciona bien
+
+// carousel, especialidad/index
+function CrearCarrusel(section){
+
+  const WrapperContainer = section.querySelector(".container")
+  const wrappers = section.querySelectorAll(".wrapper-inner");
+
+  const btnPrev = section.querySelector(".botones button:first-child");
+  const btnNext = section.querySelector(".botones button:last-child");
+
+  let index = Math.floor(wrappers.length/2);
+
+  function updateCarousel(){
+    wrappers.forEach(w => w.classList.remove("active"));
+    wrappers[index].classList.add("active");
+
+    const wrapper = wrappers[index];
+    console.log(wrapper);
+
+    const ContainerRect = WrapperContainer.getBoundingClientRect();
+    const WrapperRect = wrapper.getBoundingClientRect();
+    console.log(ContainerRect);
+    console.log(WrapperRect);
+
+    const offset = (WrapperRect.left + WrapperRect.width / 2) - (ContainerRect.left + ContainerRect.width / 2);
+
+    WrapperContainer.style.transform = `translateX(${-offset}px)`;
+  }
+
+  btnNext.addEventListener("click", () =>{
+    index ++;
+    
+    if(index > wrappers.length-1){
+      index = 0;
+    }
+    
+    updateCarousel();
+  })
+
+  btnPrev.addEventListener("click", () =>{
+    index --;
+
+    if(index < 0){
+      index = wrappers.length-1;
+    }
+    
+    updateCarousel();
+
+  })
+
+  updateCarousel();
+  window.addEventListener('resize', () => {
+    updateCarousel();
+  });
+}
+
+
+// index
 function cardRotacion3D(){
   const cards = document.querySelectorAll(".tarjeta-inner");
 
@@ -425,19 +242,207 @@ function cardRotacion3D(){
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
 
-      const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 10;
-      const rotateX = -((y - rect.height / 2) / (rect.height / 2)) * 10;
+      const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 15;
+      const rotateX = -((y - rect.height / 2) / (rect.height / 2)) * 15;
 
-      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY})deg`;
+      card.style = `transform: perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg);`;
       console.log(card.style)
 
     });
 
     card.addEventListener("mouseleave", () => {
-      card.style.transform = "rotateX(0deg) rotateY(0deg)";
+      card.style = `transform: rotateX(0deg) rotateY(0deg)`;
     })
   })
 }
 
-cardRotacion3D();
-*/
+function faqMostrarRespuesta(){
+  const faqItems = document.querySelectorAll(".faq-item");
+  
+  faqItems.forEach(item =>{
+    
+    const btn = item.querySelector(".faq-btn");
+    const body = item.querySelector(".faq-body");
+  
+    btn.addEventListener("click", () => {
+      item.classList.toggle("active");
+  
+      if(item.classList.contains("active")){
+        body.style.maxHeight = body.scrollHeight + "px";
+      }
+      else{
+        body.style.maxHeight = 0;
+      }
+    });
+  });
+}
+
+
+// index/aic
+function ajustarUltimaFila() {
+    const container = document.querySelector('.tarjeta-container');
+    const cards = document.querySelectorAll('.tarjeta');
+    const gap = 40;
+    let minCardWidth = 0;
+    if (pagina === "index"){
+      minCardWidth = 340;
+    }
+    else{
+      minCardWidth = 250;
+    }
+
+    const columnas = Math.floor((container.offsetWidth + gap) / (minCardWidth + gap));
+    const ultimaFila = cards.length % columnas;
+
+
+    // resetear todas primero
+    cards.forEach(c => c.style.maxWidth = '');
+
+    if (ultimaFila !== 0) {
+        const anchoCard = cards[0].offsetWidth; // ancho real actual
+        cards.forEach(c => c.style.maxWidth = anchoCard + 'px');
+    }
+}
+
+
+// aic
+function ocultarSpinnerBiblio(){
+  setTimeout(() => {
+    clearInterval(intervaloTexto);
+    const spinnerBiblio = document.getElementById("spinner-biblio-cargando");
+    spinnerBiblio.style.display = 'none';
+  }, 3000);
+}
+
+function textoBiblioCargando() {
+  const texto = document.getElementById("texto-biblio-cargando");
+  let puntos = 0
+  
+  return setInterval(() => {
+    puntos = (puntos + 1) % 3 ;
+    texto.textContent = "Cargando Biblioteca Digital." + ".".repeat(puntos);
+  }, 500);
+}
+
+function botonNormas(){
+  const buttons1 = document.querySelectorAll(".tab-group button[data-tab]");
+  const contents = document.querySelectorAll(".tab-panel");
+  
+  buttons1.forEach(button => {
+    button.addEventListener("click", () => {
+      buttons1.forEach(b => b.classList.remove("active"));
+      button.classList.add("active");
+  
+      contents.forEach(c => c.classList.remove("active"));
+  
+      const tab = button.getAttribute("data-tab");
+  
+      document.getElementById(tab).classList.add("active");
+  
+      checkScroll();
+      });
+  });
+}
+
+
+
+
+
+const pagina = document.body.dataset.page;
+
+
+//Animaciones Scroll
+
+
+const elementos = document.querySelectorAll(".scroll");
+
+//ahora se ejecuta cuando vas a esa seccion desde un link tambien
+window.addEventListener("scroll", checkScroll);
+checkScroll();
+
+
+// navbar y que de desactive cuando apretes un link
+
+document.addEventListener("click", (e) => {
+    if (e.target.closest("#menuBtn")) {
+        document.getElementById("nav").classList.toggle("active");
+    }
+
+    if (e.target.closest("#nav a")) {
+        document.getElementById("nav").classList.remove("active");
+    }
+});
+
+
+
+// para que el scale funcione en botones que tengan la animacion MostrarBtn
+
+document.querySelectorAll('.btn-container button').forEach(btn => {
+  btn.addEventListener('animationend', () => {
+    btn.style.animation = 'none';
+  })
+})
+
+
+fetch("/componentes/navbar.html")
+  .then(res => res.text())
+  .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+  });
+
+fetch("/componentes/footer.html")
+  .then(res => res.text())
+  .then(data => {
+      document.getElementById("footer").innerHTML = data;
+  });
+
+
+if (pagina === "index"){
+  cardRotacion3D();
+  faqMostrarRespuesta();
+}
+
+if (pagina === "aic"){
+  let intervaloTexto;
+  intervaloTexto = textoBiblioCargando()
+  botonNormas();
+}
+else{
+  const carruseles = document.querySelectorAll(".galeria-section");
+  
+  carruseles.forEach(section => {
+    CrearCarrusel(section);
+  })
+}
+
+if (pagina === "especialidad"){
+  igualarFilas();
+  igualarAlturasPorIndice();
+  asignarAnimaciones()
+  btnEspecialidad();
+}
+else{
+  ajustarUltimaFila();
+}
+
+
+window.addEventListener('resize', () => {
+  if (pagina === "especialidad"){
+    igualarAlturasPorIndice();
+    asignarAnimaciones();
+  }
+  else{
+    ajustarUltimaFila();
+  }
+
+  if (pagina === "index"){
+    const faqItems = document.querySelectorAll(".faq-item");
+
+    faqItems.forEach(item =>{
+      const body = item.querySelector(".faq-body");
+      if(item.classList.contains("active")){
+          body.style.maxHeight = body.scrollHeight + "px";
+        };
+    })
+  }
+});
