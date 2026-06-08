@@ -488,7 +488,6 @@ body{
             overflow: hidden;
             opacity: 0;
             
-
             &:hover{
                 border: 1px solid var(--border-mas-opaco);
             }
@@ -514,6 +513,7 @@ body{
                 font-family: "texto-l";
 
                 .icon{
+                    margin-left: 20px;
                     transition: transform .3s;
                 }
             }
