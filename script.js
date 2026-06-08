@@ -402,8 +402,10 @@ if (pagina === "index"){
   faqMostrarRespuesta();
 }
 
+
+let intervaloTexto;
+
 if (pagina === "aic"){
-  let intervaloTexto;
   intervaloTexto = textoBiblioCargando()
   botonNormas();
 }
